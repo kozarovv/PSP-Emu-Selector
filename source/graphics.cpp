@@ -37,9 +37,9 @@ u32 menu_text_color(int current, int selected, int choosed, int backups, int men
 	else if (current==selected)
 	{
 		if (choosed==1) return COLOR_RED;
-		else return COLOR_YELLOW;
+		else return COLOR_BLUE;
 	}
-	else return COLOR_WHITE;
+	else return COLOR_BLACK;
 }
 
 void bitmap_intitalize(string screensize, string folder)

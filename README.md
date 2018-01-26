@@ -12,7 +12,7 @@ Install pkg file. Open application, and follow onscreen instuctions.
 ## Available options
 
 - USE ENCRYPTED MINIS2.EDAT - Clean emulator without additional features. Only standard cobra patches are applied.
-- USE DECRYPTED MINIS2.EDAT - Custom emulator version with patches by mysis to allow decrypted minis2.txt to be read.
+- USE DECRYPTED MINIS2.EDAT - Custom emulator version with patches by mysis to allow decrypted minis2.edat to be read.
 
 Work only on 4.81, 4.82 cobra and non cobra firmware. App is changing files on dev_flash!
 

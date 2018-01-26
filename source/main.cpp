@@ -60,7 +60,7 @@ int restore(string appfolder, string foldername)
 			if (is_dev_blind_mounted()==0)
 			{
 				unmount_dev_blind();
-				Mess.Dialog(MSG_OK, ("Backup '"+foldername+"' has restored with success.\nYou have changed Playstation 2 emulator /dev_flash files.").c_str());
+				Mess.Dialog(MSG_OK, ("Backup '"+foldername+"' has restored with success.\nYou have changed Playstation Portable emulator /dev_flash files.").c_str());
 				return 1;
 			}
 			Mess.Dialog(MSG_OK,("Backup '"+foldername+"' has restored with success.\nPress OK to continue.").c_str());
@@ -278,7 +278,7 @@ void bitmap_menu(int menu_id, int msize, int selected, int choosed, int menu1_po
 
 	if (menu_id==1)
 	{
-		F1.PrintfToBitmap(center_text_x(sizeTitleFont, "PSPEMU_________SELECTOR"),tposy,&Menu_Layer, 0xff0000, sizeTitleFont, "PSP EMU SELECTOR");
+		F1.PrintfToBitmap(center_text_x(sizeTitleFont, "PSPEMU________SELECTOR"),tposy,&Menu_Layer, 0xff0000, sizeTitleFont, "PSP EMU SELECTOR");
 		//dynamic menu
 		for(j=start_at;j<=end_at;j++)
 		{
@@ -294,7 +294,7 @@ void bitmap_menu(int menu_id, int msize, int selected, int choosed, int menu1_po
 
 			IBCross.AlphaDrawIMGtoBitmap(xpos(90),ypos(610),&png_button_cross,&Menu_Layer);
 			if (string_array_size(menu2[menu1_pos])>2) F2.PrintfToBitmap(xpos(90)+png_button_cross.width+xpos(10),ypos(610)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Select");
-			else F2.PrintfToBitmap(xpos(90)+png_button_cross.width+xpos(10),ypos(610)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Change Emulator");
+			else F2.PrintfToBitmap(xpos(90)+png_button_cross.width+xpos(10),ypos(610)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Select");
 			IBSquare.AlphaDrawIMGtoBitmap(xpos(90),ypos(650),&png_button_square,&Menu_Layer);
 			F2.PrintfToBitmap(xpos(90)+png_button_square.width+xpos(10),ypos(650)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Delete");
 		}
@@ -317,7 +317,7 @@ void bitmap_menu(int menu_id, int msize, int selected, int choosed, int menu1_po
 		F2.PrintfToBitmap(center_text_x(sizeFont, menu2[menu1_pos][msize-1].c_str()),ypos(550),&Menu_Layer,menu_text_color(msize-1, selected, choosed,-1,-1),sizeFont, "%s",menu2[menu1_pos][msize-1].c_str());
 		//buttons
 		IBCross.AlphaDrawIMGtoBitmap(xpos(90),ypos(610),&png_button_cross,&Menu_Layer);
-		if (selected<msize-1) F2.PrintfToBitmap(xpos(90)+png_button_cross.width+xpos(10),ypos(610)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Change emulator");
+		if (selected<msize-1) F2.PrintfToBitmap(xpos(90)+png_button_cross.width+xpos(10),ypos(610)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Select");
 		else F2.PrintfToBitmap(xpos(90)+png_button_cross.width+xpos(10),ypos(610)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Select");
 		IBCircle.AlphaDrawIMGtoBitmap(xpos(90),ypos(650),&png_button_circle,&Menu_Layer);
 		F2.PrintfToBitmap(xpos(90)+png_button_circle.width+xpos(10),ypos(650)+sizeFont-ypos(5),&Menu_Layer, COLOR_WHITE, sizeFont, "Back");
